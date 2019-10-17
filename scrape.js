@@ -4,7 +4,7 @@ let scrapeBooks = async () => {
   let allBookInfo = [];
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  await page.goto('http://books.toscrape.com/catalogue/page-48.html');
+  await page.goto('http://books.toscrape.com');
   await page.waitFor(1000);
 
   let allBookLinks = await page.evaluate(() => {
